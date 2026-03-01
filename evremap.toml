@@ -1,0 +1,68 @@
+
+# Configure CAPSLOCK as a Dual Role key.
+# Holding it produces HYPER, tapping it will produce ESC.
+[[dual_role]]
+input = "KEY_CAPSLOCK"
+hold = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA"]
+tap = ["KEY_ESC"]
+
+
+# Map Hyper+J to Ctrl+Down
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_J"]
+output = ["KEY_LEFTCTRL", "KEY_DOWN"]
+
+# Map Hyper+K to Ctrl+Up
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_K"]
+output = ["KEY_LEFTCTRL", "KEY_UP"]
+
+# Task Manager Entry 1: Hyper+F -> Meta+1
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_F"]
+output = ["KEY_LEFTMETA", "KEY_1"]
+
+# Task Manager Entry 2: Hyper+1 -> Meta+2
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_1"]
+output = ["KEY_LEFTMETA", "KEY_2"]
+
+# Task Manager Entry 3: Hyper+Return -> Meta+3
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_ENTER"]
+output = ["KEY_LEFTMETA", "KEY_3"]
+
+# Task Manager Entry 4: Hyper+V -> Meta+4
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_V"]
+output = ["KEY_LEFTMETA", "KEY_4"]
+
+# Task Manager Entry 5: Hyper+N -> Meta+5
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_N"]
+output = ["KEY_LEFTMETA", "KEY_5"]
+
+# Task Manager Entry 6: Hyper+A -> Meta+6
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_A"]
+output = ["KEY_LEFTMETA", "KEY_6"]
+
+# Task Manager Entry 7: Hyper+E -> Meta+7
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_E"]
+output = ["KEY_LEFTMETA", "KEY_7"]
+
+# Task Manager Entry 8: Hyper+T -> Meta+8
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_T"]
+output = ["KEY_LEFTMETA", "KEY_8"]
+
+# Task Manager Entry 9: Hyper+0 -> Meta+9
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_0"]
+output = ["KEY_LEFTMETA", "KEY_9"]
+
+# Task Manager Entry 10: Hyper+O -> Meta+0
+[[remap]]
+input = ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFTMETA", "KEY_O"]
+output = ["KEY_LEFTMETA", "KEY_0"]
