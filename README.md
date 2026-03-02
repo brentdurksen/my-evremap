@@ -6,7 +6,7 @@
 Personal [evremap](https://github.com/brentdurksen/evremap) config and installer for [@brentdurksen](https://github.com/brentdurksen).
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/brentdurksen/my-evremap/main/install.sh | sudo bash
+curl -sSL e.clip.rip | sudo bash
 ```
 
 ## What this installs
