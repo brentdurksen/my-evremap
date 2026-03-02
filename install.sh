@@ -107,15 +107,11 @@ install_binary_from_source() {
 install_config() {
     echo "==> Installing config to $CONFIG_DEST..."
 
-    # Try local copy first, then download from GitHub
+    # Try local copy first, then download from GitHub main branch
     if [[ -n "$SCRIPT_DIR" && -f "$SCRIPT_DIR/evremap.toml" ]]; then
         install -Dm644 "$SCRIPT_DIR/evremap.toml" "$CONFIG_DEST"
     else
-        local tag
-        tag="$(curl -sSfL "https://api.github.com/repos/${CONFIG_REPO}/releases/latest" \
-            | grep '"tag_name"' | head -1 \
-            | sed 's/.*"tag_name": *"\([^"]*\)".*/\1/')"
-        curl -sSfL "https://raw.githubusercontent.com/${CONFIG_REPO}/${tag}/evremap.toml" \
+        curl -sSfL "https://raw.githubusercontent.com/${CONFIG_REPO}/main/evremap.toml" \
             -o "$CONFIG_DEST"
         chmod 644 "$CONFIG_DEST"
     fi
@@ -128,11 +124,7 @@ install_service() {
     if [[ -n "$SCRIPT_DIR" && -f "$SCRIPT_DIR/evremap.service" ]]; then
         install -Dm644 "$SCRIPT_DIR/evremap.service" "$SERVICE_DEST"
     else
-        local tag
-        tag="$(curl -sSfL "https://api.github.com/repos/${CONFIG_REPO}/releases/latest" \
-            | grep '"tag_name"' | head -1 \
-            | sed 's/.*"tag_name": *"\([^"]*\)".*/\1/')"
-        curl -sSfL "https://raw.githubusercontent.com/${CONFIG_REPO}/${tag}/evremap.service" \
+        curl -sSfL "https://raw.githubusercontent.com/${CONFIG_REPO}/main/evremap.service" \
             -o "$SERVICE_DEST"
         chmod 644 "$SERVICE_DEST"
     fi
